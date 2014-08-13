@@ -1,4 +1,4 @@
-Name         : kde5-kwrited
+Name         : kwrited
 Version      : 5.0.0
 Release      : 1
 Group        : System/Base
@@ -23,11 +23,11 @@ Configure    : none
 Builder      : none
 
 PkgBR:
-    - kde5-rpm-macros
+    - kf5-rpm-macros
     - extra-cmake-modules
     - qt5-tools
-    - kf5-kpty-devel
-    - kf5-kdelibs4support-devel
+    - kpty-devel
+    - kdelibs4support-devel
 PkgConfigBR:
     - Qt5Core
     - Qt5DBus
@@ -40,7 +40,7 @@ PkgConfigBR:
     - Qt5PrintSupport
     - Qt5X11Extras
 Requires:
-    - kde5-filesystem
+    - kf5-filesystem
 
 RequiresPost:
     - /sbin/ldconfig
@@ -48,6 +48,6 @@ RequiresPostUn:
     - /sbin/ldconfig
 
 Files:
-    - "%{_kde5_bindir}/kwrited"
-    - "%{_kde5_sysconfdir}/xdg/*"
+    - "%{_kf5_bindir}/kwrited"
+    - "%{_kf5_configdir}/*"
     - "%{_datadir}/knotifications5/kwrited.notifyrc"
